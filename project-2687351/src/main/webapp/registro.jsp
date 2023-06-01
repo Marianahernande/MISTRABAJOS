@@ -44,37 +44,32 @@
 
 <main class="form-signin w-30 ">
 
-  <form action="" method="post">
-    <img class="mb-4" src="./img/logo.png" alt="SIGCE" width="300">
+  <form action="users_register" method="post">
+    <img class="mb-4" src="./img/logo.png" alt="SIGCE" width="200">
 
     <h1 class="h5 mb-2 fw-normal">REGISTRARME</h1>
 
     <div class="form-floating mb-4">
-      <input type="text" class="form-control" id="floatingInput" placeholder="Ingrese su nombre" required autofocus pattern="[A-Za-z0-9]{8,12}">
+      <input type="text" class="form-control" name="user_firstname" id="floatingInput" placeholder="Ingrese su nombre" required autofocus pattern="[A-Za-z]{2,12}">
 
       <label for="floatingInput">Nombre</label>
     </div>
 
     <div class="form-floating mb-4">
-      <input type="text" class="form-control" id="floatingApe" placeholder="Ingrese su apellido" required autofocus pattern="[A-Za-z0-9]{8,12}">
+      <input type="text" class="form-control" name="user_lastname" id="floatingApe" placeholder="Ingrese su apellido" required pattern="[A-Za-z]{2,12}">
 
       <label for="floatingInput">Apellido</label>
     </div>
 
-    <div class="form-floating mb-4">
-      <input type="text" class="form-control" id="floatingUsu" placeholder="Ingrese su nombre de usuario" required autofocus pattern="[A-Za-z0-9]{8,12}">
-
-      <label for="floatingInput">Nombre Usuario</label>
-    </div>
 
     <div class="form-floating mb-4">
-      <input type="text" class="form-control" id="floatingEmail" placeholder="Ingrese su correo eletronico" required autofocus pattern="[A-Za-z0-9]{8,12}">
+      <input type="email" class="form-control" name="user_email" id="floatingEmail" placeholder="Ingrese su correo eletronico" required pattern="[A-Za-z0-9,@,.]{8,60}">
 
       <label for="floatingInput">Correo</label>
     </div>
 
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Ingrese su contraseña" required pattern="[A-Za-z0-9]{8,12}">
+      <input type="password" class="form-control" name="user_password" id="floatingPassword" placeholder="Ingrese su contraseña" required pattern="[A-Za-z0-9]{8,45}">
 
       <label for="floatingPassword">Contraseña</label>
     </div>
@@ -83,7 +78,7 @@
     <button class="w-40 btn btn-lg btn-primary" type="submit">Registrarme</button>
 
     <div id="register">
-      <a href="login.jsp">Iniciar Sesión</a>
+      <a href="index.jsp">Iniciar sesión</a>
     </div>
     <p class="mt-3 mb-3 text-muted">Todos los derechos son reservados SIGCE
       ©<%=displayDate()%>

@@ -38,7 +38,7 @@ body {
 
 body {
     font-family: sans-serif;
-    background: linear-gradient(#47c7fa, #e4e8ff);
+    background: linear-gradient(rgba(253, 95, 1, 0.63), rgba(253, 95, 1, 0.63));
 }
 
 .form-signin {
@@ -53,13 +53,7 @@ body {
     border-radius: 20px;
 }
 
-    .form-signin .logo{
-        position:center;
-        margin-bottom: -70px;
-        width: 400px;
-        padding: 40px;
 
-}
 
 .form-signin h4 {
     margin: 0 0 50px;

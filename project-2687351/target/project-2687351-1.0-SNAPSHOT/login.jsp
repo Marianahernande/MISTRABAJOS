@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--TITLE-->
-    <title>Registro de usuario</title>
+    <title>Login</title>
 
     <!--FAVICON-->
     <link rel="icon" type="image/x-icon" href="./icons8-aplication-64.png">
@@ -47,9 +47,9 @@
 
     <form action="" method="post">
 
-        <img class="logo" src="./img/logo.png" alt="SIGCE" width="300">
+        <img class="mb-3 logo" src="./img/logo.png" alt="SIGCE" width="230">
 
-        <h1 class="h5 mb-2 fw-normal">Entrar a tu cuenta</h1>
+        <h1 class="h5 mb-3 fw-normal">INICIAR SESIÓN</h1>
 
         <div class="form-floating mb-4">
             <input type="text" class="form-control" id="floatingNombre" placeholder="Ingrese su nombre de usuario" required autofocus pattern="[A-Za-z0-9]{8,12}">
