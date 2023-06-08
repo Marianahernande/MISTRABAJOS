@@ -1,7 +1,13 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
-<%@ page import="java.util.Calendar" %>
+<%@ page import="java.util.Calendar" %><%--
+  Created by IntelliJ IDEA.
+  User: Andres Sarmiento
+  Date: 7/06/2023
+  Time: 7:54 p. m.
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +29,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--TITLE-->
-    <title>Registro de usuario</title>
+    <title>Registro de producto</title>
 
     <!--FAVICON-->
     <link rel="icon" type="image/x-icon" href="./icons8-aplication-64.png">
@@ -49,25 +55,30 @@
 
         <img class="logo" src="./img/logo.png" alt="SIGCE" width="300">
 
-        <h1 class="h5 mb-2 fw-normal">Entrar a tu cuenta</h1>
+        <h1 class="h5 mb-2 fw-normal">Registra tu producto</h1>
 
         <div class="form-floating mb-4">
-            <input type="text" class="form-control" id="floatingNombre" placeholder="Ingrese su nombre de usuario" required autofocus pattern="[A-Za-z0-9]{8,12}">
+            <input type="text" class="form-control" name="product_name" id="floatingNombre" placeholder="Ingrese el nombre de su producto" required autofocus pattern="[A-Za-z0-9]{8,12}">
 
-            <label for="floatingNombre">Usuario</label>
+            <label for="floatingNombre">Ingrese el nombre de su producto</label>
+        </div>
+
+        <div class="form-floating mb-4">
+            <input type="text" class="form-control" name="product_valor" id="floatingApe" placeholder="Ingrese su apellido" required pattern="[A-Za-z]{2,12}">
+            <label>Ingrese el valor de su producto</label>
         </div>
 
         <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Ingrese su contraseña" required pattern="[A-Za-z0-9]{8,12}">
+            <input type="number" class="form-control" name="category_id" id="floatingPasswordd" placeholder="Ingrese la categoría perteneciente" required pattern="[A-Za-z0-9]{8,12}">
 
-            <label for="floatingPassword">Contraseña</label>
+            <label >Ingrese la categoría perteneciente</label>
         </div>
 
 
         <button class="w-40 btn btn-lg btn-primary" type="submit">Ingresar</button>
 
         <div id="register">
-            <a href="registro.jsp">Registrarme</a>
+            <a href="registro.jsp">Volver</a>
         </div>
         <p class="mt-3 mb-3 text-muted">Todos los derechos son reservados SIGCE
             ©<%=displayDate()%>
@@ -92,4 +103,4 @@
 
 </body>
 
-</html></html>
+</html>

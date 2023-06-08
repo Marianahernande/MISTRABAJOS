@@ -53,11 +53,10 @@ body {
     border-radius: 20px;
 }
 
-    .form-signin .logo{
-        position:center;
-        margin-bottom: -70px;
-        width: 400px;
-        padding: 40px;
+.form-signin .logo{
+    margin-bottom: -70px;
+    width: 400px;
+    padding: 40px;
 
 }
 

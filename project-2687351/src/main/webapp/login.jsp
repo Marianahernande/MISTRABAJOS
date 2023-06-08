@@ -69,27 +69,27 @@
         <div id="register">
             <a href="registro.jsp">Registrarme</a>
         </div>
-                        <p class="mt-3 mb-3 text-muted">Todos los derechos son reservados SIGCE
-                            ©<%=displayDate()%>
-                        </p>
-        </form>
-    </main>
+        <p class="mt-3 mb-3 text-muted">Todos los derechos son reservados SIGCE
+            ©<%=displayDate()%>
+        </p>
+    </form>
+</main>
 </main>
 
 
-        <--!Bootstrap script-->
+<--!Bootstrap script-->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-crossorigin="anonymous"></script>
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 <%!
-            public String displayDate() {
-                SimpleDateFormat dateFormat= new SimpleDateFormat("YYY");
-                Date date = Calendar.getInstance().getTime();
-                return dateFormat.format(date);
-            }
+    public String displayDate() {
+        SimpleDateFormat dateFormat= new SimpleDateFormat("YYY");
+        Date date = Calendar.getInstance().getTime();
+        return dateFormat.format(date);
+    }
 %>
 
 </body>
 
-</html>
+</html></html>

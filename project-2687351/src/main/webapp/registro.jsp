@@ -83,8 +83,8 @@
     <p class="mt-3 mb-3 text-muted">Todos los derechos son reservados SIGCE
       ©<%=displayDate()%>
     </p>
-        </form>
-    </main>
+  </form>
+</main>
 
 <--!Bootstrap script-->
 

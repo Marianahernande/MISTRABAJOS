@@ -1,6 +1,5 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.text.SimpleDateFormat"%>
+<%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
 <%@ page import="java.util.Calendar" %>
 <!DOCTYPE html>
@@ -15,7 +14,7 @@
     <meta name="author" content="Nombre Autor">
 
     <!--descripcion-->
-    <meta name="description" content="EL MEJOR SISTEMA PARA CITAS A COMITÉ ">
+    <meta name="description" content="La mejor veterinaria">
     <!--keywords-->
     <meta name="keywords" content="registro de usuario, formulario de registro, crear cuenta, registro en linea">
 
@@ -24,8 +23,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--TITLE-->
-    <title>Login</title>
+    <title>Registro de usuario</title>
 
+    <!--FAVICON-->
+    <link rel="icon" type="image/x-icon" href="./icons8-aplication-64.png">
 
     <!--CSS-->
     <!--boostrap css/ icons-->
@@ -46,12 +47,12 @@
 
     <form action="" method="post">
 
-        <img class="mb-3 logo" src="./img/logo.png" alt="SIGCE" width="230">
+        <img class="logo" src="./img/logo.png" alt="SIGCE" width="300">
 
-        <h1 class="h5 mb-3 fw-normal">INICIAR SESIÓN</h1>
+        <h1 class="h5 mb-2 fw-normal">Entrar a tu cuenta</h1>
 
         <div class="form-floating mb-4">
-            <input type="text" class="form-control" id="floatingNombre" placeholder="Ingrese su nombre de usuario" required autofocus pattern="[A-Za-z0-9]{2,12}">
+            <input type="text" class="form-control" id="floatingNombre" placeholder="Ingrese su nombre de usuario" required autofocus pattern="[A-Za-z0-9]{8,12}">
 
             <label for="floatingNombre">Usuario</label>
         </div>
@@ -68,26 +69,25 @@
         <div id="register">
             <a href="registro.jsp">Registrarme</a>
         </div>
-                        <p class="mt-3 mb-3 text-muted">Todos los derechos son reservados SIGCE
-                            ©<%=displayDate()%>
-                        </p>
-        </form>
-    </main>
+        <p class="mt-3 mb-3 text-muted">Todos los derechos son reservados SIGCE
+            ©<%=displayDate()%>
+        </p>
+    </form>
+</main>
 </main>
 
 
-        <--!Bootstrap script-->
+<--!Bootstrap script-->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-crossorigin="anonymous"></script>
-
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 <%!
-            public String displayDate() {
-                SimpleDateFormat dateFormat= new SimpleDateFormat("YYY");
-                Date date = Calendar.getInstance().getTime();
-                return dateFormat.format(date);
-            }
+    public String displayDate() {
+        SimpleDateFormat dateFormat= new SimpleDateFormat("YYY");
+        Date date = Calendar.getInstance().getTime();
+        return dateFormat.format(date);
+    }
 %>
 
 </body>
