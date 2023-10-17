@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>citaciones</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <h4>Citaciones</h4>             
+<div class="flex-inbox">
+  <div class="inbox-botones">
+    <button id="new-msg">Nuevo <i class="fa fa-envelope" aria-hidden="true"></i></button>
+    <ul class="mensajes-state">
+      <li class="active">Todos <i class="fa fa-list" aria-hidden="true"></i></li>
+      <li>No Leídos <i class="fa fa-envelope" aria-hidden="true"></i></li>
+      <li>Leídos <i class="fa fa-envelope-o" aria-hidden="true"></i></li>
+      <li>Rechazados<i class="fa fa-cloud-upload" aria-hidden="true"></i></li>
+    </ul>
+  </div>
+  <div class="mensajes-listado">
+    <h3 class="titulo-mensajes">Solicitud de citaciones</h3>
+    <div class="flex-botones">
+      <div>
+        <label>Buscar por:</label>
+        <select>
+          <option>Asunto</option>
+          <option>Remitente</option>
+        </select>
+        <input type="search" placeholder="Buscar">
+        <button>Buscar <i class="fa fa-search" aria-hidden="true"></i></button>
+      </div>
+      <div>
+        <button>Actualizar <i class="fa fa-refresh"></i></button>
+      </div>
+    </div>
+    <div class="lista-mensajes">
+      <h2 style="text-align:center">Aún no hay mensajes en su Bandeja de Entrada.</h2>
+      <ul>
+        <li class="mensaje-abierto" id="show-msg">
+          <span class="er-mensaje">Sandra Yanneth</span>
+          <span class="fh-recibido">17:35 pm</span>
+          <span class="asunto-mensaje">Solicitud citación</span>
+          <div class="re-botones">
+            <button class="btn-msg"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button class="btn-msg"><i class="fa fa-reply" aria-hidden="true"></i></button>
+          </div>
+        </li>
+        <li>
+          <span class="er-mensaje">Erick Granados</span>
+          <span class="fh-recibido">17:35 pm</span>
+          <span class="asunto-mensaje">Asunto del mensaje</span>
+          <div class="re-botones">
+            <button class="btn-msg"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button class="btn-msg"><i class="fa fa-reply" aria-hidden="true"></i></button>
+          </div>
+        </li>
+        <li>
+          <span class="er-mensaje">Uldarico Andrade</span>
+          <span class="fh-recibido">17:35 pm</span>
+          <span class="asunto-mensaje">Solicitud citación </span>
+          <div class="re-botones">
+            <button class="btn-msg"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button class="btn-msg"><i class="fa fa-reply" aria-hidden="true"></i></button>
+          </div>
+        </li>
+        <li>
+          <span class="er-mensaje">Mariana Hernández</span>
+          <span class="fh-recibido">17:35 pm</span>
+          <span class="asunto-mensaje">Asunto del mensaje</span>
+          <div class="re-botones">
+            <button class="btn-msg"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button class="btn-msg"><i class="fa fa-reply" aria-hidden="true"></i></button>
+          </div>
+        </li>
+        <li>
+          <span class="er-mensaje">Andrés Sarmiento</span>
+          <span class="fh-recibido">17:35 pm</span>
+          <span class="asunto-mensaje">Solicitud citación</span>
+          <div class="re-botones">
+            <button class="btn-msg"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button class="btn-msg"><i class="fa fa-reply" aria-hidden="true"></i></button>
+          </div>
+        </li>
+        <li>
+          <span class="er-mensaje">Alan Moreno</span>
+          <span class="fh-recibido">17:35 pm</span>
+          <span class="asunto-mensaje">Evidencia citación</span>
+          <div class="re-botones">
+            <button class="btn-msg"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button class="btn-msg"><i class="fa fa-reply" aria-hidden="true"></i></button>
+          </div>
+        </li>
+        <li class="sin-leer">
+          <span class="er-mensaje">Antonio Altamirano</span>
+          <span class="fh-recibido">15/08/2018</span>
+          <span class="asunto-mensaje">Asunto del mensaje</span>
+          <div class="re-botones">
+            <button class="btn-msg"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button class="btn-msg"><i class="fa fa-reply" aria-hidden="true"></i></button>
+          </div>
+        </li>
+        <li class="sin-leer">
+          <span class="er-mensaje">Antonio Altamirano</span>
+          <span class="fh-recibido">15/08/2018</span>
+          <span class="asunto-mensaje">Asunto del mensaje</span>
+          <div class="re-botones">
+            <button class="btn-msg"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button class="btn-msg"><i class="fa fa-reply" aria-hidden="true"></i></button>
+          </div>
+        </li>
+      
+       
+      </ul>
+    </div>
+  </div>
+  <div class="mensaje-cuerpo" id="msg">
+      <div class="btn-cerrar">
+        <button class="btn-msg" id="close-msg"><i class="fa fa-times" aria-hidden="true"></i></button>
+      </div>
+      <label class="er-mensaje"><span>Remitente:</span> Antonio Altamirano</label>
+      <div class="re-botones">
+        <button class="btn-msg"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        <button class="btn-msg"><i class="fa fa-reply" aria-hidden="true"></i></button>
+      </div>
+      <label class="asunto-mensaje"><span>Asunto:</span> Asunto del mensaje</label>
+      <span class="fh-recibido">17:35 pm</span>
+      <div class="cont-msg">
+        <div>
+          <p>We were heavy, we were sad things, when you danced in the dark over at my place. If it's my face you remember
+          from all the Sundays in the summer, then you'd know there was so much more than a spark, enough to make me run and follow you.</p>
+        </div>
+        <div>
+          <label class="er-mensaje"><span>RE:</span> Cecilia Rivas</label>
+          <span class="fh-recibido">12:15 pm</span>
+          <p>Watering plastic plants in the hope that they'll grow, seeing a message flash and then smashing up my phone.
+           Maybe it's the crazy that I'd miss, it won't get better than this. I like the way your brain works, I like the way you try
+           to run with the wolf pack when your legs are tired, I like the way you turn me inside and out</p>
+        </div>
+        <div class="msg-oculto">
+          <label class="er-mensaje"><span>RE:</span> Cecilia Rivas</label>
+          <span class="fh-recibido">12:15 pm</span>
+          <p>Watering plastic plants in the hope that they'll grow, seeing a message flash and then smashing up my phone.
+           Maybe it's the crazy that I'd miss, it won't get better than this. I like the way your brain works, I like the way you try
+           to run with the wolf pack when your legs are tired, I like the way you turn me inside and out</p>
+        </div>
+        <div class="msg-oculto">
+          <label class="er-mensaje"><span>RE:</span> Cecilia Rivas</label>
+          <span class="fh-recibido">12:15 pm</span>
+          <p>Watering plastic plants in the hope that they'll grow, seeing a message flash and then smashing up my phone.
+           Maybe it's the crazy that I'd miss, it won't get better than this. I like the way your brain works, I like the way you try
+           to run with the wolf pack when your legs are tired, I like the way you turn me inside and out</p>
+        </div>
+        <div class="msg-oculto">
+          <label class="er-mensaje"><span>RE:</span> Cecilia Rivas</label>
+          <span class="fh-recibido">12:15 pm</span>
+          <p>Watering plastic plants in the hope that they'll grow, seeing a message flash and then smashing up my phone.
+           Maybe it's the crazy that I'd miss, it won't get better than this. I like the way your brain works, I like the way you try
+           to run with the wolf pack when your legs are tired, I like the way you turn me inside and out</p>
+        </div>
+        <div class="msg-oculto">
+          <label class="er-mensaje"><span>RE:</span> Cecilia Rivas</label>
+          <span class="fh-recibido">12:15 pm</span>
+          <p>Watering plastic plants in the hope that they'll grow, seeing a message flash and then smashing up my phone.
+           Maybe it's the crazy that I'd miss, it won't get better than this. I like the way your brain works, I like the way you try
+           to run with the wolf pack when your legs are tired, I like the way you turn me inside and out</p>
+        </div>
+        <div>
+          <button class="btn-mas" id="mostrarmsg">Mostrar más...</button>
+        </div>
+      </div>
+  </div>
+</div>
+
+<!-- MODAL NUEVO MENSAJE-->
+<div class="cont-modal" id="modal-msg">
+  <div class="modal">
+    <div class="btn-modal">
+      <button class="btn-msg" id="cierraModal"><i class="fa fa-times" aria-hidden="true"></i></button>
+    </div>
+    <div class="ttl-modal">
+      <h3>Nuevo Mensaje</h3>
+    </div>
+    <div class="tipo-msg">
+      <label><strong>Tipo de Mensaje:</strong></label>
+      <select id="tipomensaje">
+        <option hidden> Seleccione una opción</option>
+        <option value="interno">Interno</option>
+        <option value="externo">Correo Electrónico</option>
+      </select>
+    </div>
+    <div id="externo" class="tipo-dest">
+      <label><strong>Correo Electrónico:</strong> <input type="text" placeholder="Correo electrónico"></label>
+    </div>
+    <div id="interno" class="tipo-dest">
+      <button id="destemp">Agregar Empleados</button>
+      <button id="destusu">Agregar Usuarios</button>
+    </div>
+    <div class="destinatarios">
+      <label><strong>Destinatarios:</strong></label>
+      <div>
+        <label class="lbl-dest"><i class="fa fa-times" aria-hidden="true"></i> Usuarios Internos</label>
+        <label class="lbl-usu"><i class="fa fa-times" aria-hidden="true"></i> Tanya Hernández</label>
+        <label class="lbl-usu"><i class="fa fa-times" aria-hidden="true"></i> Gabriela Urueta</label>
+        <label class="lbl-usu"><i class="fa fa-times" aria-hidden="true"></i> Geraldo Visuet</label>
+      </div>
+      <div>
+        <label class="lbl-dest"><i class="fa fa-times" aria-hidden="true"></i> Empleados</label>
+        <label class="lbl-usu"><i class="fa fa-times" aria-hidden="true"></i> Karen Juárez</label>
+        <label class="lbl-usu"><i class="fa fa-times" aria-hidden="true"></i> Cristian Flores</label>
+        <label class="lbl-usu"><i class="fa fa-times" aria-hidden="true"></i> Carlos Reyes</label>
+      </div>
+      <div>
+        <label class="lbl-dest"><i class="fa fa-times" aria-hidden="true"></i> Correo Electrónico</label>
+        <label class="lbl-usu"><i class="fa fa-times" aria-hidden="true"></i> gerardo@igenter.com</label>
+      </div>
+    </div>
+    <div class="tbldest" id="tblusu">
+      <table>
+        <thead>
+          <tr>
+            <th><i class="fa fa-plus" aria-hidden="true"></i></th>
+            <th>Sesión</th>
+            <th>Nombre</th>
+            <th>Buscar: <input type="search"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+            <td>admin@igenter.com</td>
+            <td>Administrador</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+            <td>jaguilar@finanzasoaxaca.gob.mx</td>
+            <td>Aguilar Casas José Luis</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+            <td>asimilado3@igenter.com</td>
+            <td>Arce Manriquez José</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+            <td>jarce@igenter.com</td>
+            <td>Arce José</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+            <td>mcarranza@igenter.com</td>
+            <td>Carranza Enriquez Mariela</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+            <td>secruz@igenter.com</td>
+            <td>Cruz Flores Selene</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tbldest" id="tblemp">
+      <label><strong>Área:</strong> </label>
+      <select>
+        <option>Área 1</option>
+        <option>Área 2</option>
+        <option>Área 3</option>
+        <option>Área 3</option>
+      </select>
+      <table>
+        <thead>
+          <tr>
+            <th><i class="fa fa-plus" aria-hidden="true"></i></th>
+            <th>Número</th>
+            <th>Nombre</th>
+            <th>Puesto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+            <td>321</td>
+            <td>Travis</td>
+            <td>Cantante</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+            <td>182</td>
+            <td>Tom</td>
+            <td>jdjhdgh</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="msg-asunto">
+      <label><strong>Asunto:</strong> <input type="text" placeholder="Asunto del mensaje..."></label>
+    </div>
+    <div class="msg-txtarea">
+      <textarea placeholder="Cuerpo del mensaje..." rows="10"></textarea>
+    </div>
+    <div class="msg-botones">
+      <button>Enviar</button>
+      <button id="cancel-msg">Cancelar</button>
+    </div>
+
+  </div>
+
+</div>
+    <script src="js.js"></script>
+</body>
+
+</html>

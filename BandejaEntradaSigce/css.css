@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+  body {
+    margin-top: 20px;
+    color: linear-gradient(0deg, rgb(238, 238, 238) 0%, rgb(244, 250, 255) 100%);
+    font-size: 12px;
+  }
+  /*titulo*/
+  h4 {
+    margin-left: 45%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 25px;
+    font-weight: 1000;
+    letter-spacing: 3px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #3c3c3c;
+  }
+  select, input {
+    border: 2px solid #87c770;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+   padding: 4px 6px;
+   font-size: 13px;
+   height: 30px;
+   display: inline-block;
+   color: #555555;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 8px;
+   vertical-align: middle;
+   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+   -webkit-transition: border linear .2s, box-shadow linear .2s;
+   -moz-transition: border linear .2s, box-shadow linear .2s;
+   -o-transition: border linear .2s, box-shadow linear .2s;
+   transition: border linear .2s, box-shadow linear .2s;
+  }
+  select:focus{
+    border-color:#87c770;
+    background-color: #fff;
+    box-shadow: 0 0 0 6px rgba(67, 219, 125, 20%);
+  }
+  input:focus{
+    border-color:#87c770;
+    background-color: #fff;
+    box-shadow: 0 0 0 6px rgba(67, 219, 125, 20%);
+  }
+  textarea {
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    padding: 4px 6px;
+    font-size: 11px;
+    width: 50%;
+    color: #555555;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    resize: none;
+  }
+
+  /*Botones*/
+
+  button {
+    background-color: #87c770;
+    color: white;
+    border: none;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    padding: 6px 8px;
+    margin: 0 10px;
+    cursor: pointer;
+    letter-spacing: 2px;
+  }
+  button i {
+    color: rgb(255, 255, 255);
+  }
+  .flex-botones {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    grid-area: botones;
+  }
+  .flex-inbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .inbox-botones {
+    padding: 15px;
+  
+  }
+  .mensajes-state {
+    font-size: 15px;
+    width: 200px;
+    list-style: none;
+    margin:40px 0;
+    padding: 10px 0;
+    letter-spacing: 1.5px;
+  }
+  .mensajes-state li {
+    color: #ffffff;
+    border-bottom:1px solid #292929;
+    padding: 10px 10px 5px 30px;
+    cursor: pointer;
+    background-color: #629150;
+    margin-top: 5px;
+   border-radius: 10px;
+  }
+  .mensajes-state li i {
+    margin-left: 5px;
+   
+  }
+  .mensajes-state li:first-child {
+    border-radius:10px;
+  }
+  .mensajes-state li:last-child {
+    border-radius: 10px;
+  }
+  .mensajes-state li:hover {
+    background-color: #C5CBCB;
+  }
+  .active {
+    background-color: #D1D8D8;
+    font-weight: bold;
+  }
+  .mensajes-listado {
+    flex-grow: 2;
+    flex-basis: 500px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-areas:"titulo botones botones"
+                          "lista lista lista";
+
+  }
+  .titulo-mensajes {
+    font-variant: small-caps;
+    font-size: 16px;
+    grid-area: titulo;
+  }
+
+  /*Zona solicitudes*/
+  .lista-mensajes {
+    height: 450px;
+    overflow-y: scroll;
+    grid-area: lista;
+    width: 95%;
+  }
+  .lista-mensajes::-webkit-scrollbar{
+    width: 7px;
+    position: absolute;
+   
+  }
+  .lista-mensajes::-webkit-scrollbar-thumb{
+    background: #a7a7a7;
+    border-radius: 50px;
+   
+  }
+  .lista-mensajes ul {
+  
+    padding: 0;
+  }
+  .lista-mensajes li {
+    background-color: #f3f3f3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-areas: "nombre nombre nombre fecha"
+                          "asunto asunto asunto botones";
+    border-bottom: 1px solid #87c770;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 10px;
+  }
+  .lista-mensajes li:last-child {
+    border-bottom: 1px solid #87c770;
+  }
+  .lista-mensajes li:hover {
+    background-color: #ececec;
+  }
+  .sin-leer > .er-mensaje:before {
+    font-family: 'FontAwesome';
+    content: "\f0a3";
+    margin-right:5px;
+    color: #2b4353;
+  }
+  .sin-leer {
+    background-color: #e4e4e4;
+  }
+  .mensaje-abierto > .er-mensaje:before {
+    font-family: 'FontAwesome';
+    content: "\f06e";
+    margin-right:5px;
+    color: #2b4353;
+  }
+  /* ESTILO PARA NOMBRE DE RECEPTOR Y EMISOR DEL MENSAJE*/
+  .er-mensaje {
+    grid-area: nombre;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 20px;
+    letter-spacing: 2px;
+  }
+  /* ESTILO PARA FECHA Y HORA DEL MENSAJE*/
+  .fh-recibido {
+    grid-area: fecha;
+    font-style: italic;
+    opacity: 0.8;
+    font-size: 10px;
+    text-align: right;
+  }
+  /* ESTILO PARA EL ASUNTO DEL MENSAJE*/
+  .asunto-mensaje {
+    grid-area: asunto;
+    margin-top: 5px;
+    margin-left: 40px;
+  }
+  .asunto-mensaje span {
+    font-weight: bold;
+  }
+  .re-botones {
+    grid-area: botones;
+    text-align: right;
+  }
+  .btn-msg {
+    background-color: transparent;
+    font-size: 14px;
+    padding: 5px;
+    margin: 0;
+  }
+  .btn-msg i {
+    color: #555;
+  }
+  .mensaje-cuerpo {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-areas: "cerrar cerrar cerrar"
+                          "nombre nombre botones"
+                          "asunto asunto fecha"
+                          "mensaje mensaje mensaje";
+    grid-template-rows: repeat(3, 30px) max-content;
+    flex-grow: 2;
+    flex-basis: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px 3px rgba(90,90,90,0.4);
+  }
+  .mensaje-cuerpo .re-botones i {
+    color: #ea4708;
+  }
+  .mensaje-cuerpo .asunto-mensaje {
+    margin-top: 0;
+  }
+  .btn-cerrar {
+    grid-area: cerrar;
+    text-align: right;
+  }
+  .cont-msg {
+    grid-area: mensaje;
+    padding: 5px 5px;
+    /*border-radius: 4px;*/
+    max-height: 600px;
+    overflow-x: auto;
+  }
+  .cont-msg p {
+    text-align: justify;
+    grid-area: textomsg;
+  }
+  .cont-msg div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-areas: "nombre fecha"
+                          "textomsg textomsg";
+    grid-gap: 5px;
+    border-top: 1px solid #b3b3b3;
+    padding: 5px 0;
+  }
+  .cont-msg .msg-oculto {
+    display: none;
+  }
+  .cont-msg .er-mensaje {
+    color: #636363;
+    font-size: 12px;
+    font-style: italic;
+  }
+  .btn-mas {
+    width: 100px;
+    margin: 10px auto;
+    background-color: #2b4353;
+    font-weight: bold;
+  }
+  /* ESTILO MODAL */
+  .cont-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(73, 76, 77, 0.6);
+  }
+  .modal {
+    background: white;
+    margin: 15% auto;
+    padding: 10px 15px;
+    width: 60%;
+    -moz-boder-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 12px 1px rgba(49,51,51,0.6);
+    display:grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: "cerrar cerrar"
+                        "titulo titulo"
+                        "tipo tipodest"
+                        "destinatarios destinatarios"
+                        "tabla tabla"
+                        "asunto asunto"
+                        "texto texto"
+                        "botones botones";
+    grid-gap: 10px;
+  }
+  .btn-modal {
+    grid-area: cerrar;
+    text-align: right;
+  }
+  .btn-modal button {
+    font-size: 16px;
+    opacity: 0.8;
+  }
+  .ttl-modal {
+    grid-area: titulo;
+    text-align: center;
+  }
+  .ttl-modal h3 {
+    font-size: 16px;
+    margin: 2px;
+  }
+  .tipo-msg {
+    grid-area: tipo;
+  }
+  .tipo-dest {
+    display: none;
+    grid-area: tipodest;
+  }
+  .destinatarios {
+    grid-area: destinatarios;
+    max-height: 250px;
+    overflow-x: auto;
+  }
+  .destinatarios div {
+    display: none;
+    padding: 5px 10px;
+  }
+  .lbl-dest {
+    display: block;
+    color: #292929;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  .lbl-usu {
+    color: #363636;
+    margin-left: 5px;
+    border-radius: 6px;
+    padding: 2px 3px;
+    line-height: 25px;
+  }
+  .lbl-dest:hover i,
+  .lbl-usu:hover i {
+    color: #ea4708;
+  }
+  .tbldest {
+    display: none;
+    grid-area: tabla;
+    max-height: 200px;
+    overflow-x: auto;
+  }
+  .tbldest table {
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  .tbldest i {
+    color: black;
+  }
+  .tbldest th {
+    background-color: #C5CBCB;
+    padding: 3px 5px;
+    font-weight: normal;
+    color: black;
+  }
+  .tbldest td {
+    padding: 3px 8px;
+  }
+  .tbldest tr:nth-child(even) {
+    background-color: #eaeaea;
+  }
+  .msg-asunto {
+    grid-area: asunto;
+  }
+  .msg-asunto input {
+    width: 200px;
+  }
+  .msg-txtarea {
+    grid-area: texto;
+  }
+  .msg-botones {
+    grid-area: botones;
+    text-align: center;
+  }
+  /*@media (max-width: 700px) {
+    .flex-inbox {
+      flex-wrap: wrap;
+    }
+    .mensajes-listado {
+      flex-basis: 400px;
+    }
+  }*/
